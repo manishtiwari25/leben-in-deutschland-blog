@@ -1,0 +1,87 @@
+{% comment %}
+<!-- 라디오 버튼 버전 -->
+<style>
+.lang-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.lang-radio {
+    display: none;
+}
+
+.lang-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-radio:checked + .lang-label {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+.lang-label:hover {
+    background-color: #f8f9fa;
+}
+
+.lang-radio:checked + .lang-label:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<div class="lang-selector">
+{%- for lang in site.languages -%}
+    <input type="radio" 
+           id="lang-{{ lang }}" 
+           name="language" 
+           class="lang-radio" 
+           value="{{ lang }}"
+           {% if lang == site.active_lang %}checked{% endif %}
+           onchange="changeLang('{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}')">
+    <label for="lang-{{ lang }}" class="lang-label">{{ lang }}</label>
+{%- endfor -%}
+</div>
+
+<script>
+function changeLang(url) {
+    window.location.href = url;
+}
+</script>
+{% endcomment %}
+
+<!-- 드롭다운 리스트 버전 -->
+<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
+
+<div class="lang-dropdown">
+    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
+    {%- for lang in site.languages -%}
+        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
+                {% if lang == site.active_lang %}selected{% endif %}>
+            {% case lang %}
+            {% when 'ko' %}🇰🇷 한국어
+            {% when 'en' %}🇺🇸 English
+            {% when 'ja' %}🇯🇵 日本語
+            {% when 'zh-TW' %}🇹🇼 正體中文
+            {% when 'es' %}🇪🇸 Español
+            {% when 'pt-BR' %}🇧🇷 Português
+            {% when 'fr' %}🇫🇷 Français
+            {% when 'de' %}🇩🇪 Deutsch
+            {% else %}{{ lang }}
+            {% endcase %}
+        </option>
+    {%- endfor -%}
+    </select>
+</div>
+
+<script>
+function changeLang(url) {
+    window.location.href = url;
+}
+</script>

@@ -1,0 +1,126 @@
+name: "Build and Deploy"
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # submodules: true
+          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
+          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        continue-on-error: true
+        env:
+          JEKYLL_ENV: "production"
+      
+      - name: Setup IndexNow
+        # Generate files dynamically to prevent them from being leaked in public repositories.
+        # This example will put the file in the root directory of the site.You may change the location by yourself.
+        run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
+      
+      - name: Setup Naver Site Verification(Old Domain)
+        run: |
+          echo naver-site-verification: ${{ secrets.LEGACY_NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.LEGACY_NAVER_SITE_VERIFICATION }}
+      
+      - name: Setup Naver Site Verification
+        run: |
+          echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.NAVER_SITE_VERIFICATION }}
+      
+      - name: Setup Ads.txt
+        run: |
+          echo google.com, pub-8691553075583022, DIRECT, f08c47fec0942fa0 > ./_site/ads.txt
+      
+      - name: Create CNAME file
+        run: |
+          echo www.yunseo.kim > ./_site/CNAME
+
+      - name: Test site
+        run: |
+          bundle exec htmlproofer _site \
+            \-\-disable-external \
+            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Update SHA256 hash table
+        run: |
+          python3 ./tools/compare_hash.py
+      
+      - name: Commit and Push updated hash table
+        run: |
+          git config user.name "김윤서(Yunseo Kim)"
+          git config user.email "git@yunseo.kim"
+          git add ./tools/hash.csv
+          if ! git diff-index --quiet HEAD --; then
+            git commit -m "Auto-update hash.csv"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site${{ steps.pages.outputs.base_path }}"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
+      - name: indexnow-action
+        uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
+        with:
+          # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
+          # The location of your sitemap must start with http(s). 
+          sitemap-location: 'https://www.yunseo.kim/sitemap.xml' 
+          key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
+          since: 2
+          since-unit: 'week'
