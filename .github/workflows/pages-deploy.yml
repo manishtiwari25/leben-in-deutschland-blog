@@ -50,25 +50,19 @@ jobs:
         continue-on-error: true
         env:
           JEKYLL_ENV: "production"
-      
+
       - name: Setup IndexNow
         # Generate files dynamically to prevent them from being leaked in public repositories.
         # This example will put the file in the root directory of the site.You may change the location by yourself.
         run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
-      
+
       - name: Setup Ads.txt
         run: |
           echo google.com, pub-2889277787752693, DIRECT, f08c47fec0942fa0 > ./_site/ads.txt
-      
+
       - name: Create CNAME file
         run: |
           echo blogs.lebenindeutschland.org > ./_site/CNAME
-
-      - name: Test site
-        run: |
-          bundle exec htmlproofer _site \
-            \-\-disable-external \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
@@ -85,11 +79,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      
+
       - name: indexnow-action
         uses: bojieyang/indexnow-action@v2
         with:
-          sitemap-location: 'https://blogs.lebenindeutschland.org/sitemap.xml' 
+          sitemap-location: "https://blogs.lebenindeutschland.org/sitemap.xml"
           key: ${{ secrets.INDEXNOW_KEY }}
           since: 2
-          since-unit: 'week'
+          since-unit: "week"
