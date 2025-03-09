@@ -1,0 +1,94 @@
+# Der Layout-Text der Website
+
+# ----- Allgemeine Bezeichnungen -----
+
+layout:
+  post: Beitrag
+  category: Kategorie
+  tag: Schlagwort
+
+# Die Registerkarten der Seitenleiste
+tabs:
+  # Format: <Dateiname_ohne_Endung>: <Wert>
+  home: Startseite
+  categories: Kategorien
+  tags: Schlagwörter
+  archives: Archiv
+  about: Über uns
+  sponsor: Sponsor
+
+# Der Text, der in der Suchleiste & den Suchergebnissen angezeigt wird
+search:
+  hint: suchen
+  cancel: Abbrechen
+  no_results: Hoppla! Keine Ergebnisse gefunden.
+
+panel:
+  lastmod: Kürzlich aktualisiert
+  trending_tags: Trendige Schlagwörter
+  toc: Inhalt
+
+copyright:
+  # Wird am Ende des Beitrags angezeigt
+  license:
+    template: Dieser Beitrag steht unter der Lizenz :LICENSE_NAME des Autors.
+    name: CC BY 4.0
+    link: https://creativecommons.org/licenses/by/4.0/
+
+  # Wird in der Fußzeile angezeigt
+  brief: Einige Rechte vorbehalten.
+  verbose: >-
+    Sofern nicht anders angegeben, stehen die Blogbeiträge auf dieser Website 
+    unter der Creative Commons Attribution 4.0 International (CC BY 4.0)-Lizenz des Autors.
+
+meta: '<a href="https://play.google.com/store/apps/details?id=org.lebenindeutschland.app">Laden Sie unsere mobile App herunter</a>' # Fußzeile entfernen, ohne Vorlage zu ersetzen
+
+not_found:
+  statment: Entschuldigung, wir haben diese URL verlegt oder sie verweist auf etwas, das nicht existiert.
+
+notification:
+  update_found: Eine neue Version des Inhalts ist verfügbar!
+  update: Aktualisieren 🚀
+
+# ----- Beitragsspezifische Bezeichnungen -----
+
+post:
+  written_by: Von
+  posted: Veröffentlicht
+  updated: Aktualisiert
+  words: Wörter
+  pageview_measure: Aufrufe
+  read_time:
+    unit: min
+    prompt: Lesezeit
+  relate_posts: Weiterführende Artikel
+  share: Teilen
+  button:
+    next: Neuer
+    previous: Älter
+    copy_code:
+      succeed: Kopiert!
+    share_link:
+      title: Link kopieren
+      succeed: Link erfolgreich kopiert!
+  # Anheftungshinweis für die Beitragsliste auf der Startseite
+  pin_prompt: Angehängt
+
+# Datums- und Zeitformat
+# Siehe: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
+df:
+  post:
+    strftime: '%d. %b %Y'
+    dayjs: 'll'
+  archives:
+    strftime: '%b'
+    dayjs: 'MMM'
+
+# Kategorieseite
+categories:
+  category_measure:
+    singular: Kategorie
+    plural: Kategorien
+  post_measure:
+    singular: Beitrag
+    plural: Beiträge

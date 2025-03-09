@@ -56,48 +56,19 @@ jobs:
         # This example will put the file in the root directory of the site.You may change the location by yourself.
         run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
       
-      - name: Setup Naver Site Verification(Old Domain)
-        run: |
-          echo naver-site-verification: ${{ secrets.LEGACY_NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.LEGACY_NAVER_SITE_VERIFICATION }}
-      
-      - name: Setup Naver Site Verification
-        run: |
-          echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.NAVER_SITE_VERIFICATION }}
-      
       - name: Setup Ads.txt
         run: |
-          echo google.com, pub-8691553075583022, DIRECT, f08c47fec0942fa0 > ./_site/ads.txt
+          echo google.com, pub-2889277787752693, DIRECT, f08c47fec0942fa0 > ./_site/ads.txt
       
       - name: Create CNAME file
         run: |
-          echo www.yunseo.kim > ./_site/CNAME
+          echo blogs.lebenindeutschland.org > ./_site/CNAME
 
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
-      
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      
-      - name: Update SHA256 hash table
-        run: |
-          python3 ./tools/compare_hash.py
-      
-      - name: Commit and Push updated hash table
-        run: |
-          git config user.name "김윤서(Yunseo Kim)"
-          git config user.email "git@yunseo.kim"
-          git add ./tools/hash.csv
-          if ! git diff-index --quiet HEAD --; then
-            git commit -m "Auto-update hash.csv"
-            git push
-          else
-            echo "No changes to commit."
-          fi
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
@@ -116,11 +87,9 @@ jobs:
         uses: actions/deploy-pages@v4
       
       - name: indexnow-action
-        uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
+        uses: bojieyang/indexnow-action@v2
         with:
-          # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
-          # The location of your sitemap must start with http(s). 
-          sitemap-location: 'https://www.yunseo.kim/sitemap.xml' 
-          key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
+          sitemap-location: 'https://blogs.lebenindeutschland.org/sitemap.xml' 
+          key: ${{ secrets.INDEXNOW_KEY }}
           since: 2
           since-unit: 'week'
