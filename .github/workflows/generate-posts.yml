@@ -1,0 +1,38 @@
+name: Generate Posts
+on:
+  schedule:
+    - cron: "0 0 */15 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  generate_posts:
+    name: Generate Posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
+
+      - name: Install dependencies
+        run: |
+          cd tools/generate-blogs
+          npm install
+
+      - name: Sync
+        run: |
+          cd tools/generate-blogs
+          npm run prod
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "Sync questions & bump version"
+          git push

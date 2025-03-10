@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+    }
+}

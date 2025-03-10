@@ -1,0 +1,38 @@
+---
+title: "{{ title }}"
+date: "{{ date }}"
+categories: "{{ categories }}"
+tags: "{{ tags }}"
+---
+
+## 📌 **Question**
+
+{{ question }}
+
+{{ image }}
+
+---
+
+### 📝 **Options:**
+
+🔘 **A)** {{ a }}
+
+🔘 **B)** {{ b }}
+
+🔘 **C)** {{ c }}
+
+🔘 **D)** {{ d }}
+
+---
+
+<details>
+  <summary>🔍 Show Answer</summary>
+
+  <p>
+💡  <b>Correct Answer:</b>  {{ answer }}
+  </p>
+  <p>
+    📖<b>Explanation:</b>
+    {{ explanation }}
+  </p>
+</details>
