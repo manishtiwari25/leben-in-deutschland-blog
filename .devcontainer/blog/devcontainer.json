@@ -17,5 +17,6 @@
             ]
         }
     },
-    "postCreateCommand": "bundle install"
+    "postCreateCommand": "bundle install",
+    "waitFor": "postCreateCommand"
 }

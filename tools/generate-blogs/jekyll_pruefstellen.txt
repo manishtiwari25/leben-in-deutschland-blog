@@ -1,0 +1,17 @@
+---
+title: "prüfstellen-in-{{ title }}"
+date: "{{ date }}"
+categories: "{{ categories }}"
+tags: "{{ tags }}"
+image: "{{ heroImage }}"
+---
+
+## Prüfstellen in {{ stateName }}
+
+| Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
+|-------|--------|---------|---------|---------|---------|---------|
+{{ tableRows }}
+|-------|--------|---------|---------|---------|---------|---------|
+
+
+## Last Updated On {{ lastUpdate }}

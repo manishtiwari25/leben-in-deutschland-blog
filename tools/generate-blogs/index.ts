@@ -1,6 +1,10 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import * as https from 'https';
+import * as XLSX from 'xlsx';
+import { Prüfstellen } from './types/prüfstellen';
+import * as cheerio from 'cheerio';
+import states from './states.json';
 
 // Remove diacritics, quotes, unsafe symbols, replace spaces with hyphens, and limit length.
 function sanitizeFilename(title: string): string {
@@ -118,7 +122,8 @@ async function fetchJsonData(url: string): Promise<any> {
 
 const url = 'https://raw.githubusercontent.com/leben-in-deutschland/leben-in-deutschland-app/main/src/scrap/data/question.json';
 
-fetchJsonData(url).then(async (jsonData) => {
+const generatePosts = async () => {
+    const jsonData = await fetchJsonData(url)
     const posts_en = [];
     const posts_de = [];
     // Read config to keep track of processed posts
@@ -176,8 +181,131 @@ fetchJsonData(url).then(async (jsonData) => {
     await generateJekyllFiles('jekyll_template.txt', "../../_posts/en", posts_en);
     // Update the config file
     await fs.writeFile('config.json', JSON.stringify(config, null, 2), 'utf-8');
+};
+
+const BASE_URL_BAMF = "https://www.bamf.de"
+async function scrapPrüfstellenForState(stateCode: string): Promise<Prüfstellen[]> {
+    let allPrüfstellen = [];
+    const page = `${BASE_URL_BAMF}/SharedDocs/Anlagen/DE/Integration/Einbuergerung/Pruefstellen-${stateCode.toUpperCase()}.xlsx`;
+    const $ = await cheerio.fromURL(page);
+    let links = [];
+    $('ul>li>a.c-link.c-link--download.c-link--desc.c-link--orient').each((_, element) => {
+        const href = $(element).attr('href');
+        const url = `${BASE_URL_BAMF}${href}`;
+        links.push(url);
+    });
+
+    for (let i = 0; i < links.length; i++) {
+        const resp = await fetch(links[i]);
+        if (!resp.ok) {
+            console.log(`Error fetching ${links[i]}`);
+            continue;
+        }
+        const blob = await resp.blob();
+        const text = await blob.arrayBuffer();
+        const workbook = XLSX.read(text, { type: "binary" });
+
+        for (let sheet in workbook.Sheets) {
+            let worksheet = workbook.Sheets[sheet];
+            let rows = XLSX.utils.sheet_to_json(worksheet, { raw: true, header: 1, blankrows: false, skipHidden: true, defval: "" });
+            for (let i = 1; i < rows.length; i++) {
+                const prüfstelle = {
+                    regierungsbezirk: !rows[i][0] ? (rows[i][0] + " ") : "" + rows[i][1],
+                    plz: rows[i][2],
+                    ort: rows[i][3],
+                    einrichtung: rows[i][4],
+                    straße: rows[i][5],
+                    telefon: rows[i][6],
+                    email: rows[i][7],
+                };
+                allPrüfstellen.push(prüfstelle);
+            }
+        }
+    }
+    return allPrüfstellen;
+}
+
+const scrapPrüfstellen = async (): Promise<{
+    stateCode: string,
+    stateName: string,
+    eng: string,
+    capital: string,
+    data: Prüfstellen[]
+}[]> => {
+    try {
+        let allPrüfstellen = [];
+        for (let i = 0; i < states.length; i++) {
+            const data = (await scrapPrüfstellenForState(states[i].code))
+                .filter((x) => (!x.regierungsbezirk.startsWith("Stand")))
+                .filter((x) => x.einrichtung !== "");
+
+            data.shift();
+
+            allPrüfstellen.push({
+                "stateCode": states[i].code,
+                "stateName": states[i].name,
+                "eng": states[i].eng,
+                "capital": states[i].capital,
+                "data": data
+            });
+        }
+        return allPrüfstellen;
+    } catch (error) {
+        console.error('Error scraping data:', error);
+    }
+    return [];
+}
+function uniqByReduce<T>(array: T[]): T[] {
+    return array.reduce((acc: T[], cur: T) => {
+        if (!acc.includes(cur)) {
+            acc.push(cur);
+        }
+        return acc;
+    }, [])
+}
+async function generatePrüfstellenPosts() {
+    const prüfstellen = await scrapPrüfstellen();
+    const date = "2025-03-10";
+    for (const state of prüfstellen) {
+        const templateContent = await fs.readFile("jekyll_pruefstellen.txt", 'utf-8');
+        // Ensure output directory exists
+        await fs.mkdir("../../_posts/prüfstellen", { recursive: true });
+
+        const tableRows = state.data.map(prüfstelle =>
+            `|${prüfstelle.regierungsbezirk}|${prüfstelle.plz}|${prüfstelle.ort}|${prüfstelle.einrichtung}|${prüfstelle.straße}|${prüfstelle.telefon}|${prüfstelle.email}|`
+        ).join('\n');
+
+        const tagEinrichtungData = state.data.filter(x => x.einrichtung).map(prüfstelle => cleanTagsAndCategories("prüfstellen-in-" + prüfstelle.einrichtung)).join(' ');
+        const tagOrtData = uniqByReduce(state.data.filter(x => x.ort).map(prüfstelle => cleanTagsAndCategories("prüfstellen-in-" + prüfstelle.ort))).join(' ');
+        const tagplzData = uniqByReduce(state.data.filter(x => x.plz).map(prüfstelle => "prüfstellen-in-" + prüfstelle.plz)).join(' ');
+
+        const sanitizeFileName = sanitizeFilename(state.stateName);
+
+        let processedContent = templateContent.replace('{{ tableRows }}', tableRows);
+        processedContent = processedContent.replace('{{ title }}', sanitizeFileName);
+        processedContent = processedContent.replace('{{ lastUpdate }}', new Date().toISOString().split('T')[0]);
+        processedContent = processedContent.replace('{{ date }}', date);
+        processedContent = processedContent.replace('{{ categories }}', `${state.stateCode} ${state.stateName}`);
+        processedContent = processedContent.replace('{{ tags }}', `${state.stateCode} ${state.stateName} ${tagEinrichtungData} ${tagOrtData} ${tagplzData}
+            `);
+        processedContent = processedContent.replace('{{ heroImage }}', `https://www.lebenindeutschland.org/states/coat-of-arms/${state.stateName}.svg`);
+
+        const fileName = `${date}-prüfstellen-in-${sanitizeFileName}.md`;
+        const filePath = path.join("../../_posts/prüfstellen", fileName);
+        await fs.writeFile(filePath, processedContent, 'utf-8');
+        console.log(`✅ File created: ${filePath}`);
+    }
+};
+
+const scrapAllSources = async () => {
+    await generatePosts();
+    await generatePrüfstellenPosts();
+};
+
+scrapAllSources().then(() => {
+    console.log('Scraping completed successfully');
     process.exit(0);
-}).catch((error) => {
-    console.error('❌ Error:', error);
+}).catch((err) => {
+    console.error('Error scraping data:', err);
     process.exit(1);
 });

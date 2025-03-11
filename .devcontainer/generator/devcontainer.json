@@ -1,12 +1,12 @@
 {
     "name": "leben-in-deutschland-blog-generator",
-    "runArgs": [
-        "--userns=keep-id:uid=1000,gid=1000"
-    ],
     "containerUser": "node",
     "updateRemoteUserUID": true,
     "postCreateCommand": "bash ./.devcontainer/generator/postCreateCommand.sh",
-    // "workspaceFolder": "/workspaces/leben-in-deutschland-blog/tools/generate-blogs",
+    // "runArgs": [
+    //     "--platform=linux/amd64"
+    // ],
+    "waitFor": "postCreateCommand",
     "containerEnv": {
         "HOME": "/home/node"
     },
