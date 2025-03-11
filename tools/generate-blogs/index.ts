@@ -285,6 +285,7 @@ async function generatePrüfstellenPosts() {
         processedContent = processedContent.replace('{{ title }}', sanitizeFileName);
         processedContent = processedContent.replace('{{ lastUpdate }}', new Date().toISOString().split('T')[0]);
         processedContent = processedContent.replace('{{ date }}', date);
+        processedContent = processedContent.replace('{{ stateName }}', state.stateName);
         processedContent = processedContent.replace('{{ categories }}', `${state.stateCode} ${state.stateName}`);
         processedContent = processedContent.replace('{{ tags }}', `${state.stateCode} ${state.stateName} ${tagEinrichtungData} ${tagOrtData} ${tagplzData}
             `);
