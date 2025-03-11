@@ -7,7 +7,7 @@ tags: "SN Sachsen prüfstellen-in-ESO-Education-Group prüfstellen-in-VHS-Annabe
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Sachsen.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Sachsen
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

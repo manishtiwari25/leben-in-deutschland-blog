@@ -7,7 +7,7 @@ tags: "HB Bremen prüfstellen-in-VHS-Bremerhaven prüfstellen-in-VHS-Bremen prü
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Bremen.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Bremen
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

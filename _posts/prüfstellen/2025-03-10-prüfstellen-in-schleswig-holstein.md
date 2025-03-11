@@ -7,7 +7,7 @@ tags: "SH Schleswig-Holstein prüfstellen-in-Landesverband-der-Volkshochschulen-
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Schleswig-Holstein.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Schleswig-Holstein
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

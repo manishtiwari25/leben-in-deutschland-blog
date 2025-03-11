@@ -7,7 +7,7 @@ tags: "SL Saarland prüfstellen-in-VHS-Merzig-Wadern-e-V prüfstellen-in-VHS-Neu
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Saarland.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Saarland
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

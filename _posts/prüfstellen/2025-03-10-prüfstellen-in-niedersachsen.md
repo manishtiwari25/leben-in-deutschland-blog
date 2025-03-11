@@ -7,7 +7,7 @@ tags: "NI Niedersachsen prüfstellen-in-Alpha-Zentrum-eV prüfstellen-in-Arbeit-
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Niedersachsen.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Niedersachsen
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

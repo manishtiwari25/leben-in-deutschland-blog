@@ -7,7 +7,7 @@ tags: "BB Brandenburg prüfstellen-in-KVHS-Barnim prüfstellen-in-VHS-Dahme-Spre
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Brandenburg.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Brandenburg
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

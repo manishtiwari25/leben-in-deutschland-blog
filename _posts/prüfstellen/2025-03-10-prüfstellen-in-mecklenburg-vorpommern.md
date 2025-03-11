@@ -7,7 +7,7 @@ tags: "MV Mecklenburg-Vorpommern prüfstellen-in-Kreisvolkshochschule-Ludwigslus
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Mecklenburg-Vorpommern.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Mecklenburg-Vorpommern
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

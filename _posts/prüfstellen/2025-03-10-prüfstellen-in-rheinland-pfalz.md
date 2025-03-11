@@ -7,7 +7,7 @@ tags: "RP Rheinland-Pfalz prüfstellen-in-Löhrstr-127 prüfstellen-in-Neubrunne
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Rheinland-Pfalz.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Rheinland-Pfalz
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

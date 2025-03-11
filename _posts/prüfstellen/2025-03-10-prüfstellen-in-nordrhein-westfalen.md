@@ -7,7 +7,7 @@ tags: "NW Nordrhein-Westfalen prüfstellen-in-Academia-Espanola-de-Formacion-eV 
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Nordrhein-Westfalen.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Nordrhein-Westfalen
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

@@ -7,7 +7,7 @@ tags: "HH Hamburg prüfstellen-in-Arab-World-IC-GmbH prüfstellen-in-Arbeit-Bild
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Hamburg.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Hamburg
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

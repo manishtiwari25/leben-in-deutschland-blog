@@ -7,7 +7,7 @@ tags: "BE Berlin prüfstellen-in-VHS-Berlin-Friedrichshain-Kreuzberg prüfstelle
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Berlin.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Berlin
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

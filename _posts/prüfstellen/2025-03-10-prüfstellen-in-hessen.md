@@ -7,7 +7,7 @@ tags: "HE Hessen prüfstellen-in-BENGI-eV prüfstellen-in-Akademische-Bildungspl
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Hessen.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Hessen
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

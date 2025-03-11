@@ -7,7 +7,7 @@ tags: "ST Sachsen-Anhalt prüfstellen-in-VHS-Altmarkkreis-Salzwedel prüfstellen
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Sachsen-Anhalt.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Sachsen-Anhalt
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

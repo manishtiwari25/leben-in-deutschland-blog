@@ -7,7 +7,7 @@ tags: "TH Thüringen prüfstellen-in-KVHS-Hildburghausen prüfstellen-in-KVHS-We
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Thüringen.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Thüringen
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

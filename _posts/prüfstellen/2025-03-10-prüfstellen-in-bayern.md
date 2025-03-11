@@ -7,7 +7,7 @@ tags: "BY Bayern prüfstellen-in-Akademia-Zentrum-für-Kommunikation-und-Bildung
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Bayern.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Bayern
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|

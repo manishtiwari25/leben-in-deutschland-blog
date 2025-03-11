@@ -7,7 +7,7 @@ tags: "BW Baden-Württemberg prüfstellen-in-Inlingua-Sprachcenter-Friedrichshaf
 image: "https://www.lebenindeutschland.org/states/coat-of-arms/Baden-Württemberg.svg"
 ---
 
-## Prüfstellen in {{ stateName }}
+## Prüfstellen in Baden-Württemberg
 
 | Regierungsbezirk | Plz | Ort | Einrichtung | Straße | Telefon | Email |
 |-------|--------|---------|---------|---------|---------|---------|
