@@ -14,7 +14,7 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Berlin.svg"
 | |10969|Berlin|VHS Berlin Friedrichshain-Kreuzberg|Wassertorstr. 4|030-902984600|info@vhs-fk.de|
 | |10369|Berlin|VHS Berlin Lichtenberg|Paul-Junius-Str. 71|030-902965983|vhs.deutsch@lichtenberg.berlin.de|
 | |12207|Berlin|VHS Berlin Steglitz-Zehlendorf|Goethestr. 9/11|030/902992657|deutschkurse@vhssz.de|
-| |12437|Berlin|VHS Berlin Treptow-Köpenick|Baumschulenstr. 79/81|030-902974064|vhs.detsch@ba-tk.berlin.de|
+| |12437|Berlin|VHS Berlin Treptow-Köpenick|Baumschulenstr. 79/81|030-902974064|vhs.deutsch@ba-tk.berlin.de|
 | |10627|Berlin|VHS Berlin-Charlottenburg City West|Pestalozzistr. 40/41||vhs@charlottenburg-wilmersdorf.de|
 | |12627|Berlin|VHS Berlin-Marzahn-Hellersdorf|Mark-Twain-Str. 27|030-902932580|infovhs@ba-mh.berlin.de|
 | |13347|Berlin|VHS Berlin-Mitte|Antonstr. 37|030-901837474|deutsch@vhsmitte.de|
@@ -26,4 +26,4 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Berlin.svg"
 |-------|--------|---------|---------|---------|---------|---------|
 
 
-## Last Updated On 2025-03-14
+## Last Updated On 2025-03-15
