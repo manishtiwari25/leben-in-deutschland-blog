@@ -31,16 +31,15 @@
         createCookie(name,"",-1);
     }
     if(readCookie('cookie-notice-dismissed')=='true') {
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2889277787752693" crossorigin="anonymous"></script>
-      
-      <!-- Web Analytics -->
-      {% for analytics in site.analytics %}
-        {% capture str %}{{ analytics }}{% endcapture %}
-        {% assign platform = str | split: '{' | first %}
-        {% if site.analytics[platform].id and site.analytics[platform].id != empty %}
-          {% include analytics/{{ platform }}.html %}
-        {% endif %}
-      {% endfor %}
+        {% raw %}
+            {% for analytics in site.analytics %}
+                {% capture str %}{{ analytics }}{% endcapture %}
+                {% assign platform = str | split: '{' | first %}
+                {% if site.analytics[platform].id and site.analytics[platform].id != empty %}
+                    {% include analytics/{{ platform }}.html %}
+                {% endif %}
+            {% endfor %}
+            {% endraw %}
     } else {
         document.getElementById('cookie-notice').style.display = 'block';
     }
