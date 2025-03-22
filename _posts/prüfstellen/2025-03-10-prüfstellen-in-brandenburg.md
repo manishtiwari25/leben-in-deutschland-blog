@@ -34,4 +34,4 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Brandenburg.svg"
 |-------|--------|---------|---------|---------|---------|---------|
 
 
-## Last Updated On 2025-03-21
+## Last Updated On 2025-03-22
