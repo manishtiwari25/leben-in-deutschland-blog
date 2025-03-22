@@ -19,9 +19,6 @@ social:
   name: leben-in-deutschland
   email: hello@bitesinbyte.com # change to your email address
 
-analytics:
-  google:
-    id: 'G-V5KXCM7XXT' # fill in your Google Analytics ID
 
 theme_mode:   # [light|dark]
 
