@@ -57,7 +57,7 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Hessen.svg"
 |Offenbach|63303|Dreieich|VHS Kreis Offenbach|Frankfurter Str. 160-166, Haus 1|06103-31311313|vhs@kreis-offenbach.de|
 |Lahn-Dill-Kreis|35683|Dillenburg|VHS Lahn-Dill-Kreis|Bahnhofstr. 10|02771/407-758|info@lahn-dill-akademie.de|
 |Bergstr.|68623|Lampertheim|VHS Lampertheim|Haus am Römer|06206-935364|vhs@lampertheim.de|
-|Main-Taunus-Kreis|65719|Hofheim am Taunus|VHS Main-Taunus-Kreis|Pfarrgasse 38|06192-990118|seibel@vhs-mtk.de|
+|Main-Taunus-Kreis|65719|Hofheim am Taunus|VHS Main-Taunus-Kreis|Pfarrgasse 38|06192-990118|flor@vhs-mtk.de|
 |Marburg-Biedenkopf|35039|Marburg|VHS Marburg-Biedenkopf|Hermann-Jacobsohn-Weg 1|06421-405-6721|BendelC@Marburg-Biedenkopf.de|
 |Odenwaldkreis|64711|Erbach|VHS Odenwaldkreis|Michelstädter Str. 12|06062 70-1733|m.doerr@odenwaldkreis.de |
 |Kassel|34117|Kassel|VHS Region- Kassel|Wilhelmshöher Allee 19-21|0561-10030|katharina-seewald@landkreiskassel.de|
@@ -76,4 +76,4 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Hessen.svg"
 |-------|--------|---------|---------|---------|---------|---------|
 
 
-## Last Updated On 2025-03-24
+## Last Updated On 2025-03-25
