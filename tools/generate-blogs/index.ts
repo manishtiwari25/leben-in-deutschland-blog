@@ -120,7 +120,7 @@ async function fetchJsonData(url: string): Promise<any> {
     });
 }
 
-const url = 'https://raw.githubusercontent.com/leben-in-deutschland/leben-in-deutschland-app/main/scrap/data/question.json';
+const url = 'https://raw.githubusercontent.com/leben-in-deutschland/leben-in-deutschland-scrapper/main/data/question.json';
 
 const generatePosts = async () => {
     const jsonData = await fetchJsonData(url)
