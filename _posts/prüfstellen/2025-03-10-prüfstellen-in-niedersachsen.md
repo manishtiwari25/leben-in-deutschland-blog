@@ -22,7 +22,7 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Niedersachsen.svg
 |Ammerland|26655|Westerstede|KVHS Ammerland|Am Röttgen 60|04488-5651001|kvhs-sprachen@ammerland.de|
 |Aurich|26605|Norden|KVHS Aurich-Norden gGmbH Standort Norden|Uffenstraße 1|04931-1870520|info@kvhs-norden.de|
 |Gifhorn|38518|Gifhorn|KVHS Gifhorn|Freiherr-vom-Stein-Str. 24|05371-9459-636|inte@kvhs-gifhorn.de|
-|Goslar|38640|Goslar|KVHS Goslar|Klubgartenstr. 6|05321-76431|kvhs@landkreis-goslar.de|
+|Goslar|38640|Goslar|KVHS Goslar|Klubgartenstr. 6|05321-767543|deutsch@vhs-goslar.de|
 |Kreisfreie Stadt|37083|Göttingen|KVHS Göttingen|Reinhäuser Landstr. 4 /Hinter den Höfen 14|05541-903611|greve@kvhs-goettingen.de|
 |Helmstedt|38350|Helmstedt|KVHS Helmstedt|Bötticherstr. 2|05351-120410|info@kvhs-helmstedt.de|
 |Holzminden|37603|Holzminden|KVHS Holzminden|Neue Str.7|05531 - 707 343|krystyna.tessmann@landkreis-holzminden.de|
@@ -80,4 +80,4 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Niedersachsen.svg
 |-------|--------|---------|---------|---------|---------|---------|
 
 
-## Last Updated On 2025-04-01
+## Last Updated On 2025-04-02
