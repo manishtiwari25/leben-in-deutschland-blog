@@ -60,7 +60,7 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Niedersachsen.svg
 |Osterholz|28865|Lilienthal|VHS Lilienthal-Grasberg-Ritterhude-Worpswede|Klosterstr. 25|04298-929237|vhs@lilienthal.de|
 |Emsland|49808|Lingen|VHS Lingen|Am Pulverturm|0591 91202300|info@vhs-lingen.de|
 |Emsland|49716|Meppen|VHS Meppen gGmbH|Herzog-Arenberg-Str. 7|05931 93 73-22|marie-anne.horstmann@vhs-meppen.de|
-|Nienburg (Weser)|31582|Nienburg|VHS Nienburg|Rühmkorffstr. 12|05021 967 617|vhs@kreis-ni.de|
+|Nienburg (Weser)|31582|Nienburg|VHS Nienburg|Rühmkorffstr. 12|05021 967 614|vhs@kreis-ni.de|
 |Aurich|26506|Norden|VHS Norden|Gartenweg 21|04931-924149|info@vhs-norden.de|
 |Kreisfreie Stadt|26122|Oldenburg|VHS Oldenburg|Wallstr. 17|0441 92391-26|hagen@vhs-ol.de|
 |Kreisfreie Stadt|49082|Osnabrück|VHS Osnabrücker Land|Am Schölerberg 1|0541 501 4022|quappen@lkos.de|
@@ -80,4 +80,4 @@ image: "https://www.lebenindeutschland.org/states/coat-of-arms/Niedersachsen.svg
 |-------|--------|---------|---------|---------|---------|---------|
 
 
-## Last Updated On 2025-04-03
+## Last Updated On 2025-04-04
