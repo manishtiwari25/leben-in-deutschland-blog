@@ -4,7 +4,7 @@ date: "2025-03-10"
 categories: "HB Bremen"
 tags: "HB Bremen prüfstellen-in-VHS-Bremerhaven prüfstellen-in-VHS-Bremen prüfstellen-in-Bremerhaven prüfstellen-in-Bremen prüfstellen-in-27568 prüfstellen-in-28195
             "
-image: "https://www.lebenindeutschland.org/states/coat-of-arms/Bremen.svg"
+image: "https://leben-in-deutschland.github.io/leben-in-deutschland-app/states/coat-of-arms/Bremen.svg"
 ---
 
 ## Prüfstellen in Bremen
