@@ -4,7 +4,7 @@ date: "2025-03-10"
 categories: "HH Hamburg"
 tags: "HH Hamburg prüfstellen-in-Arab-World-IC-GmbH prüfstellen-in-Arbeit-Bildung-Integration-(ABI)-eV prüfstellen-in-DAA-Deutsche-Angestellten-Akademie-GmbH-Hamburg prüfstellen-in-FITS-job-konzepte-GmbH prüfstellen-in-Hamburger-Volkshochschule prüfstellen-in-Interkulturelle-Bildung-Hamburg-IBH-eV prüfstellen-in-KOM-gemeinnützige-Gesellschaft-für-berufliche-Kompetenzentwicklung-mbH prüfstellen-in-Akademikerbund-Hamburg-eV prüfstellen-in-Türkische-Gemeinde-in-Hamburg-und-Umgebung-eV prüfstellen-in-Hamburg prüfstellen-in-20459 prüfstellen-in-20099 prüfstellen-in-22083 prüfstellen-in-20535 prüfstellen-in-20357 prüfstellen-in-22089 prüfstellen-in-22525 prüfstellen-in-22767
             "
-image: "https://www.lebenindeutschland.org/states/coat-of-arms/Hamburg.svg"
+image: "https://leben-in-deutschland.github.io/leben-in-deutschland-app/states/coat-of-arms/Hamburg.svg"
 ---
 
 ## Prüfstellen in Hamburg
