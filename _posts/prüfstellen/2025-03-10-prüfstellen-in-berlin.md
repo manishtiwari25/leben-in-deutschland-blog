@@ -4,7 +4,7 @@ date: "2025-03-10"
 categories: "BE Berlin"
 tags: "BE Berlin prüfstellen-in-VHS-Berlin-Friedrichshain-Kreuzberg prüfstellen-in-VHS-Berlin-Lichtenberg prüfstellen-in-VHS-Berlin-Steglitz-Zehlendorf prüfstellen-in-VHS-Berlin-Treptow-Köpenick prüfstellen-in-VHS-Berlin-Charlottenburg-City-West prüfstellen-in-VHS-Berlin-Marzahn-Hellersdorf prüfstellen-in-VHS-Berlin-Mitte prüfstellen-in-VHS-Berlin-Neukölln-Otto-Suhr prüfstellen-in-VHS-Berlin-Pankow prüfstellen-in-VHS-Berlin-Reinickendorf prüfstellen-in-VHS-Berlin-Spandau prüfstellen-in-VHS-Berlin-Tempelhof-Schöneberg prüfstellen-in-Berlin prüfstellen-in-10969 prüfstellen-in-10369 prüfstellen-in-12207 prüfstellen-in-12437 prüfstellen-in-10627 prüfstellen-in-12627 prüfstellen-in-13347 prüfstellen-in-12053 prüfstellen-in-13405 prüfstellen-in-13507 prüfstellen-in-13597 prüfstellen-in-10781
             "
-image: "https://www.lebenindeutschland.org/states/coat-of-arms/Berlin.svg"
+image: "https://leben-in-deutschland.github.io/leben-in-deutschland-app/states/coat-of-arms/Berlin.svg"
 ---
 
 ## Prüfstellen in Berlin
