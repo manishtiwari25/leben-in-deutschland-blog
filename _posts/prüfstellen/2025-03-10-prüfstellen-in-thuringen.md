@@ -4,7 +4,7 @@ date: "2025-03-10"
 categories: "TH Thüringen"
 tags: "TH Thüringen prüfstellen-in-KVHS-Hildburghausen prüfstellen-in-KVHS-Weimarer-Land prüfstellen-in-Sprache-und-Bildung-GmbH-Geschäftsstelle-Eisenach prüfstellen-in-Sprache-und-Bildung-GmbH-Geschäftsstelle-Mühlhausen prüfstellen-in-Thüringer-Volkshochschulverband-eV prüfstellen-in-VHS-Altenburger-Land prüfstellen-in-VHS-des-Landkreises-Schmalkalden-Meiningen prüfstellen-in-VHS-des-Landkreises-Sonneberg prüfstellen-in-VHS-Eisenach prüfstellen-in-VHS-Unstrut-Hainich-Kreis prüfstellen-in-VHS-Kreis-Nordhausen prüfstellen-in-Mitteldeutsches-Institut-für-Qualif-Und-ber-Reha-MIQR prüfstellen-in-Volkshochschule-Erfurt prüfstellen-in-Hildburghausen prüfstellen-in-Apolda prüfstellen-in-Eisenach prüfstellen-in-Mühlhausen-Thüringen prüfstellen-in-Jena prüfstellen-in-Altenburg prüfstellen-in-Meiningen prüfstellen-in-Sonneberg prüfstellen-in-Nordhausen prüfstellen-in-Erfurt prüfstellen-in-98646 prüfstellen-in-99510 prüfstellen-in-99817 prüfstellen-in-99974 prüfstellen-in-07743 prüfstellen-in-04600 prüfstellen-in-98617 prüfstellen-in-96515 prüfstellen-in-99734 prüfstellen-in-99092 prüfstellen-in-99084
             "
-image: "https://www.lebenindeutschland.org/states/coat-of-arms/Thüringen.svg"
+image: "https://leben-in-deutschland.github.io/leben-in-deutschland-app/states/coat-of-arms/Thüringen.svg"
 ---
 
 ## Prüfstellen in Thüringen
