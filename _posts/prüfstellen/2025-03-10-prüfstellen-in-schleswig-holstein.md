@@ -4,7 +4,7 @@ date: "2025-03-10"
 categories: "SH Schleswig-Holstein"
 tags: "SH Schleswig-Holstein prüfstellen-in-Landesverband-der-Volkshochschulen-Schleswig-Holsteins-eV prüfstellen-in-Kiel prüfstellen-in-24103
             "
-image: "https://www.lebenindeutschland.org/states/coat-of-arms/Schleswig-Holstein.svg"
+image: "https://leben-in-deutschland.github.io/leben-in-deutschland-app/states/coat-of-arms/Schleswig-Holstein.svg"
 ---
 
 ## Prüfstellen in Schleswig-Holstein
